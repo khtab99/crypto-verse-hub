@@ -22,7 +22,7 @@ function useCoinData() {
     {
       id: "binancecoin",
       symbol: "bnbusdt",
-      name: "Binance Coin",
+      name: "Binance",
       image:
         "https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png",
     },
