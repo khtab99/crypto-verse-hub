@@ -58,6 +58,7 @@ function useCoinData() {
       ws.onmessage = (event) => {
         try {
           const message = JSON.parse(event.data);
+          // console.log("📩 Incoming WebSocket Data:", message); // Debugging the raw data
           const updatedCoin = coins.find(
             (coin) => coin.symbol === message.s.toLowerCase()
           );
@@ -70,6 +71,7 @@ function useCoinData() {
               const updatedData = {
                 ...updatedCoin,
                 current_price: parseFloat(message.p),
+
                 price_change_percentage_24h: message.m ? -1 : 1,
               };
 
