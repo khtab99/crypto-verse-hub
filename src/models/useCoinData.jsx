@@ -107,7 +107,7 @@ function useCoinData() {
         wsRef.current.close();
       }
     };
-  }, []);
+  });
 
   return { data, loading };
 }
